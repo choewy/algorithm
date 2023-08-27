@@ -61,7 +61,7 @@ describe('leetcode 02. Add Two Numbers', () => {
     );
   });
 
-  it('tc2', () => {
+  it('tc3', () => {
     const l1 = makeListNode([5]);
     const l2 = makeListNode([5]);
     const res = addTwoNumbers(l1, l2);
