@@ -1,4 +1,6 @@
-/** @description https://leetcode.com/problems/two-sum/description */
+/**
+ * @description https://leetcode.com/problems/two-sum/description
+ * */
 
 export const twoSum = (nums: number[], target: number): number[] => {
   let s = -1;
