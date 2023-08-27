@@ -1,6 +1,16 @@
-/** @description https://leetcode.com/problems/add-two-numbers/description/ */
+/**
+ * @description https://leetcode.com/problems/add-two-numbers/description
+ * */
 
-import { ListNode } from './leetcode-2-add-two-numbers.types';
+export class ListNode {
+  val: number;
+  next: ListNode | null;
+
+  constructor(val?: number, next?: ListNode | null) {
+    this.val = val === undefined ? 0 : val;
+    this.next = next === undefined ? null : next;
+  }
+}
 
 export const addTwoNumbers = (
   l1: ListNode | null,
