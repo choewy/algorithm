@@ -1,5 +1,7 @@
 # typescript
 node_modules
 
+
 # python
 .venv
+**/__pycache__
