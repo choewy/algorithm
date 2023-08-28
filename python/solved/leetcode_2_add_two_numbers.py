@@ -6,21 +6,6 @@ class ListNode:
         self.val = val
         self.next = next
 
-    @staticmethod
-    def make(nums: List[int]):
-        node = None
-        next = None
-
-        for num in nums:
-            if next is None:
-                node = ListNode(num)
-                next = node
-            else:
-                next.next = ListNode(num)
-                next = next.next
-
-        return node
-
 
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
