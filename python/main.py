@@ -1,4 +1,4 @@
-from solved import leetcode_003_longest_substring_without_repeating_characters as target
+from solved import leetcode_004_median_of_two_sorted_arrays as target
 
 
 if __name__ == "__main__":
