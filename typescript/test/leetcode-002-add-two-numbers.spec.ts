@@ -1,7 +1,4 @@
-import {
-  ListNode,
-  addTwoNumbers,
-} from 'typescript/solved/leetcode-2-add-two-numbers';
+import { ListNode, addTwoNumbers } from "typescript/solved/leetcode-002-add-two-numbers";
 
 const makeListNode = (values: number[]): ListNode | null => {
   let node: null | ListNode = null;
@@ -36,8 +33,8 @@ const getNodeValues = (node: ListNode | null) => {
   return values;
 };
 
-describe('leetcode 02. Add Two Numbers', () => {
-  it('tc1', () => {
+describe("leetcode 02. Add Two Numbers", () => {
+  it("tc1", () => {
     const l1 = makeListNode([2, 4, 9]);
     const l2 = makeListNode([5, 6, 4, 9]);
     const res = addTwoNumbers(l1, l2);
@@ -46,24 +43,20 @@ describe('leetcode 02. Add Two Numbers', () => {
     expect(JSON.stringify(values)).toEqual(JSON.stringify([7, 0, 4, 0, 1]));
   });
 
-  it('tc2', () => {
+  it("tc2", () => {
     const l1 = makeListNode([
-      1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 1,
+      1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
     ]);
     const l2 = makeListNode([5, 6, 4]);
     const res = addTwoNumbers(l1, l2);
     const values = getNodeValues(res);
 
     expect(JSON.stringify(values)).toEqual(
-      JSON.stringify([
-        6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 1,
-      ]),
+      JSON.stringify([6, 6, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1])
     );
   });
 
-  it('tc3', () => {
+  it("tc3", () => {
     const l1 = makeListNode([5]);
     const l2 = makeListNode([5]);
     const res = addTwoNumbers(l1, l2);
