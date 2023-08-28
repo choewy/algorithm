@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "ts": "nodemon --watch typescript/{solved/**/*,main}.ts --exec ts-node typescript/main.ts",
-    "py": "nodemon --watch python/*.py --exec python3 python/main.py",
-    "ts:test": "jest --watch"
+    "ts:test": "jest --watch",
+    "py": "nodemon --watch python --exec python3 python/*.py"
   },
   "keywords": [],
   "author": "",
