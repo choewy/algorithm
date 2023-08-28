@@ -4,4 +4,4 @@ node_modules
 
 # python
 .venv
-**/__pycache__
+python/**/__pycache__
