@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-005-longest-palindromic-substring_2";
+import * as target from "./solved/leetcode-006-zigzag-conversion";
 
 const main = () => {
   target.test();
