@@ -7,15 +7,12 @@ export class ListNode {
   next: ListNode | null;
 
   constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
+    this.val = val ?? 0;
+    this.next = next ?? null;
   }
 }
 
-export const addTwoNumbers = (
-  l1: ListNode | null,
-  l2: ListNode | null,
-): ListNode | null => {
+export const addTwoNumbers = (l1: ListNode | null, l2: ListNode | null): ListNode | null => {
   let plus = 0;
 
   let node: ListNode | null = null;
