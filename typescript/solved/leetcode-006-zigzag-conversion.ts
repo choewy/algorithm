@@ -8,8 +8,8 @@ export const convert = (s: string, numRows: number): string => {
   let layer = 0;
   let direction: "top" | "down" | "up" | "bottom" = "top";
 
-  for (let i = 0; i < s.length; i++) {
-    arr[layer] += s[i];
+  for (const element of s) {
+    arr[layer] += element;
 
     switch (direction) {
       case "top":
