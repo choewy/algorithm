@@ -6,7 +6,7 @@
 const MIN = -(2 ** 31);
 const MAX = 2 ** 31 - 1;
 
-export const myAtoi = (s: string): number => {
+const myAtoi = (s: string): number => {
   const arr = s.trim().split("");
 
   let val = "";

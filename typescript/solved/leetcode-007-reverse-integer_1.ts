@@ -5,7 +5,7 @@
 const MIN = 2 ** 31;
 const MAX = 2 ** 31 - 1;
 
-export const reverse = (x: number): number => {
+const reverse = (x: number): number => {
   const m = x < 0;
   const t = x.toString().split("");
   const s = m ? t.slice(1) : t;

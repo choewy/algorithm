@@ -2,7 +2,7 @@
  * @runtime 144 ms
  * @memory  51.61 mb
  */
-export const isPalindrome = (x: number): boolean => {
+const isPalindrome = (x: number): boolean => {
   const s = x.toString().split("");
 
   if (s.length === 1) {
