@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-009-palindrome-number_2";
+import * as target from "./solved/leetcode-007-reverse-integer_2";
 
 const main = () => {
   target.test();
