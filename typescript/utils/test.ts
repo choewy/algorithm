@@ -14,7 +14,6 @@ export class TestModule<Args extends Array<any>, Expect> {
       const expect = target.expect;
       const output = this.func(...target.args);
       const result = expect === output;
-
       const message = JSON.stringify({ name, args, expect, output, result }, null, 2);
 
       console.log(message);

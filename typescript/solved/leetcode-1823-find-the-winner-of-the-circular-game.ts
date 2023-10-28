@@ -1,11 +1,10 @@
+import { TestModule, TestTarget } from "@/utils";
+
 /**
  * @link https://leetcode.com/problems/find-the-winner-of-the-circular-game/
  * @runtime 47 ms
  * @memory 45.03 MB
  */
-
-import { TestModule, TestTarget } from "../utils";
-
 class Player {
   constructor(public pos: number, public next: Player = null) {}
 }
