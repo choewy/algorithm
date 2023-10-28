@@ -18,13 +18,13 @@ public class Target {
    }
 
    public String toString() {
-      return "{" 
-         + "\n  name : " + this.name
-         + ",\n  nums : " + Arrays.toString(this.nums)
-         + ",\n  target : " + this.value
-         + ",\n  expect : " + Arrays.toString(this.expect)
-         + ",\n  output : " + Arrays.toString(this.output)
-         + ",\n  result : " + this.result
+      return "{\n" 
+         + "  name : " + this.name + ",\n"
+         + "  nums : " + Arrays.toString(this.nums) + ",\n"
+         + "  target : " + this.value + ",\n"
+         + "  expect : " + Arrays.toString(this.expect) + ",\n"
+         + "  output : " + Arrays.toString(this.output) + ",\n"
+         + "  result : " + this.result
          + "\n}";
    }
 
