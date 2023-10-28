@@ -49,17 +49,13 @@ const makeNumberArray = (nums1: number[], nums2: number[]): number[] => {
     if (num1 > num2) {
       nums.push(num2);
       num2 = null;
-      continue;
     }
   }
 
   return nums;
 };
 
-export const findMedianSortedArrays = (
-  nums1: number[],
-  nums2: number[],
-): number => {
+export const findMedianSortedArrays = (nums1: number[], nums2: number[]): number => {
   let value: number;
 
   const nums = makeNumberArray(nums1, nums2);
