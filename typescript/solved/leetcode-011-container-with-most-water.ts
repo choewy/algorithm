@@ -30,7 +30,6 @@ const maxAreaWithBruteForce = (heights: number[]): number => {
  * @runtime 136 ms
  * @memory 51.09 mb
  */
-
 const maxArea = (heights: number[]): number => {
   const cursor = { left: 0, right: heights.length - 1 };
 
@@ -59,6 +58,8 @@ const maxArea = (heights: number[]): number => {
 };
 
 export const test = () => {
-  new TestModule(maxArea).test([new TestTarget("case 1", [[1, 8, 6, 2, 5, 4, 8, 3, 7]], 49)]);
-  new TestModule(maxArea).test([new TestTarget("case 2", [[1, 1]], 1)]);
+  new TestModule(maxArea).test([
+    new TestTarget("case 1", [[1, 8, 6, 2, 5, 4, 8, 3, 7]], 49),
+    new TestTarget("case 2", [[1, 1]], 1),
+  ]);
 };

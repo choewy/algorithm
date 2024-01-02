@@ -33,7 +33,9 @@ const romanToInt = (s: string): number => {
 };
 
 export const test = () => {
-  new TestModule(romanToInt).test([new TestTarget("case 1", ["III"], 3)]);
-  new TestModule(romanToInt).test([new TestTarget("case 2", ["LVIII"], 58)]);
-  new TestModule(romanToInt).test([new TestTarget("case 3", ["MCMXCIV"], 1994)]);
+  new TestModule(romanToInt).test([
+    new TestTarget("case 1", ["III"], 3),
+    new TestTarget("case 2", ["LVIII"], 58),
+    new TestTarget("case 3", ["MCMXCIV"], 1994),
+  ]);
 };

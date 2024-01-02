@@ -39,7 +39,9 @@ const intToRoman = (num: number): string => {
 };
 
 export const test = () => {
-  new TestModule(intToRoman).test([new TestTarget("case 1", [3], "III")]);
-  new TestModule(intToRoman).test([new TestTarget("case 2", [58], "LVIII")]);
-  new TestModule(intToRoman).test([new TestTarget("case 3", [1994], "MCMXCIV")]);
+  new TestModule(intToRoman).test([
+    new TestTarget("case 1", [3], "III"),
+    new TestTarget("case 2", [58], "LVIII"),
+    new TestTarget("case 3", [1994], "MCMXCIV"),
+  ]);
 };
