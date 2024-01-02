@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-013-roman-to-integer";
+import * as target from "./solved/leetcode-012-integer-to-roman";
 
 const main = () => {
   target.test();
