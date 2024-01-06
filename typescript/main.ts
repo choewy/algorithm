@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0019-remove-nth-node-from-end-of-list";
+import * as target from "./solved/leetcode-0020-valid-parentheses";
 
 const main = () => {
   target.test();
