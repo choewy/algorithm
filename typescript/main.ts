@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-014-longest-common-prefix";
+import * as target from "./solved/leetcode-015-3sum";
 
 const main = () => {
   target.test();
