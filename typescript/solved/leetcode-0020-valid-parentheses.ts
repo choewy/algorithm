@@ -5,14 +5,14 @@ import { TestModule, TestTarget } from "@/utils";
  * @runtime 48 ms
  * @memory 44.94 mb
  */
-const pare: Record<string, string> = {
+const closeset: Record<string, string> = {
   ")": "(",
   "}": "{",
   "]": "[",
 };
 
 const isValid = (s: string): boolean => {
-  const openers = Object.values(pare);
+  const openers = Object.values(closeset);
   const stack: string[] = [];
 
   for (const c of s) {
@@ -21,7 +21,7 @@ const isValid = (s: string): boolean => {
       continue;
     }
 
-    if (stack.pop() === pare[c]) {
+    if (stack.pop() === closeset[c]) {
       continue;
     }
 
