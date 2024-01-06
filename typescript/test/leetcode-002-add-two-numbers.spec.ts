@@ -1,4 +1,4 @@
-import { ListNode, addTwoNumbers } from "typescript/solved/leetcode-002-add-two-numbers";
+import { ListNode, addTwoNumbers } from "@/solved/leetcode-0002-add-two-numbers";
 
 const makeListNode = (values: number[]): ListNode | null => {
   let node: null | ListNode = null;

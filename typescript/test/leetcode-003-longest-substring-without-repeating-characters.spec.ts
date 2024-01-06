@@ -1,4 +1,4 @@
-import { lengthOfLongestSubstring } from "typescript/solved/leetcode-003-longest-substring-without-repeating-characters";
+import { lengthOfLongestSubstring } from "@/solved/leetcode-0003-longest-substring-without-repeating-characters";
 
 describe("leetcode 03. Longest Substring Without Repeating Characters", () => {
   it("tc1", () => {

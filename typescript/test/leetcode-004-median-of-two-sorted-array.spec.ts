@@ -1,4 +1,4 @@
-import { findMedianSortedArrays } from "typescript/solved/leetcode-004-median-of-two-sorted-arrays";
+import { findMedianSortedArrays } from "@/solved/leetcode-0004-median-of-two-sorted-arrays";
 
 describe("leetcode 04. Median of Two Sorted Arrays", () => {
   it("tc1", () => {

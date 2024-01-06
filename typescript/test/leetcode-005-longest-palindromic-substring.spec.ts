@@ -1,5 +1,5 @@
-import * as brootForce from "typescript/solved/leetcode-005-longest-palindromic-substring_1";
-import * as twoPointer from "typescript/solved/leetcode-005-longest-palindromic-substring_2";
+import * as brootForce from "@/solved/leetcode-0005-longest-palindromic-substring_1";
+import * as twoPointer from "@/solved/leetcode-0005-longest-palindromic-substring_2";
 
 describe("leetcode 05. Longest Palindromic Substring", () => {
   describe("using brute force", () => {
