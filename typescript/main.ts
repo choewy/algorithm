@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0022-generate-parentheses";
+import * as target from "./solved/leetcode-0023-merge-k-sorted-lists";
 
 const main = () => {
   target.test();
