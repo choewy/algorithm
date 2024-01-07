@@ -8,58 +8,44 @@ class ListNode {
 }
 
 /**
- * @runtime 314 ms
- * @memory 47.74 mb
+ * @runtime 72 ms
+ * @memory 49.41 mb
  * */
-const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
+const getListsValues = (lists: Array<ListNode | null>) => {
+  const values: number[] = [];
+
+  while (lists.length > 0) {
+    let ls = lists.pop();
+
+    while (ls) {
+      values.push(ls.val);
+      ls = ls.next;
+    }
+  }
+
+  return values;
+};
+
+const createSortedList = (values: number[]) => {
+  values.sort((x, y) => x - y);
+
   const list = new ListNode();
 
   let node = list;
 
-  while (true) {
-    let index = -1;
-    let value = null;
-
-    for (let i = 0; i < lists.length; i++) {
-      const ls = lists[i];
-
-      if (ls === null) {
-        continue;
-      }
-
-      if (value === null || value > ls.val) {
-        index = i;
-        value = ls.val;
-      }
-    }
-
-    if (value === null) {
-      break;
-    }
-
+  for (const value of values) {
     node.next = new ListNode(value);
     node = node.next;
-
-    lists[index] = lists[index].next;
   }
 
   return list.next;
 };
 
+const mergeKLists = (lists: Array<ListNode | null>): ListNode | null => {
+  return createSortedList(getListsValues(lists));
+};
+
 export const test = () => {
-  const createLinkedList = (values: number[]) => {
-    const list = new ListNode();
-
-    let node = list;
-
-    for (const value of values) {
-      node.next = new ListNode(value);
-      node = node.next;
-    }
-
-    return list.next;
-  };
-
   new TestModule(mergeKLists).test([
     new TestTarget(
       "case 01",
@@ -68,11 +54,11 @@ export const test = () => {
           [1, 4, 5],
           [1, 3, 4],
           [2, 6],
-        ].map((values) => createLinkedList(values)),
+        ].map((values) => createSortedList(values)),
       ],
-      createLinkedList([1, 1, 2, 3, 4, 4, 5, 6])
+      createSortedList([1, 1, 2, 3, 4, 4, 5, 6])
     ),
-    new TestTarget("case 02", [[].map((values) => createLinkedList(values))], createLinkedList([])),
-    new TestTarget("case 03", [[[]].map((values) => createLinkedList(values))], createLinkedList([])),
+    new TestTarget("case 02", [[].map((values) => createSortedList(values))], createSortedList([])),
+    new TestTarget("case 03", [[[]].map((values) => createSortedList(values))], createSortedList([])),
   ]);
 };
