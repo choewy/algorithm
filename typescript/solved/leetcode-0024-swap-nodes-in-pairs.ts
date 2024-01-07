@@ -9,7 +9,7 @@ class ListNode {
   constructor(public val: number = 0, public next: ListNode | null = null) {}
 }
 
-const getListNodeValus = (node: ListNode | null, values: number[], row: number[], flag: boolean) => {
+const getListNodeValues = (node: ListNode | null, values: number[], row: number[], flag: boolean) => {
   if (node === null) {
     return values.concat(row);
   }
@@ -25,7 +25,7 @@ const getListNodeValus = (node: ListNode | null, values: number[], row: number[]
     row = [];
   }
 
-  return getListNodeValus(node.next, values, row, !flag);
+  return getListNodeValues(node.next, values, row, !flag);
 };
 
 const createList = (values: number[]) => {
@@ -42,7 +42,7 @@ const createList = (values: number[]) => {
 };
 
 const swapPairs = (head: ListNode | null): ListNode | null => {
-  return createList(getListNodeValus(head, [], [], true));
+  return createList(getListNodeValues(head, [], [], true));
 };
 
 export const test = () => {
