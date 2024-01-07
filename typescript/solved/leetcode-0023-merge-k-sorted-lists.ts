@@ -15,11 +15,11 @@ const getListsValues = (lists: Array<ListNode | null>) => {
   const values: number[] = [];
 
   while (lists.length > 0) {
-    let ls = lists.pop();
+    let node = lists.pop();
 
-    while (ls) {
-      values.push(ls.val);
-      ls = ls.next;
+    while (node) {
+      values.push(node.val);
+      node = node.next;
     }
   }
 
