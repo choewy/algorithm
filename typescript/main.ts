@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0020-valid-parentheses";
+import * as target from "./solved/leetcode-0021-merge-two-sorted-lists";
 
 const main = () => {
   target.test();

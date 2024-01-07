@@ -22,6 +22,8 @@ export class TestModule<Args extends Array<any>, Expect> {
 
       if (Array.isArray(expect) && Array.isArray(output)) {
         result = this.checkArray(expect, output);
+      } else if (typeof expect === "object") {
+        result = JSON.stringify(expect) === JSON.stringify(output);
       } else {
         result = expect === output;
       }
