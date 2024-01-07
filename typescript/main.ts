@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0023-merge-k-sorted-lists";
+import * as target from "./solved/leetcode-0024-swap-nodes-in-pairs";
 
 const main = () => {
   target.test();
