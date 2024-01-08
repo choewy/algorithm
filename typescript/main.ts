@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0026-remove-duplicates-from-sorted-array";
+import * as target from "./solved/leetcode-0027-remove-element";
 
 const main = () => {
   target.test();

@@ -1,5 +1,3 @@
-import { TestModule, TestTarget } from "@/utils";
-
 /**
  * @link https://leetcode.com/problems/remove-duplicates-from-sorted-array
  * @runtime 54 ms
