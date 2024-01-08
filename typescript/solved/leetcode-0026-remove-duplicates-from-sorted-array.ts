@@ -43,7 +43,25 @@ const removeDuplicatesWithSplice = (nums: number[]): number => {
   return k;
 };
 
+const judge = (func: (nums: number[]) => number, nums: number[], expected: number[]): boolean => {
+  const k = func(nums);
+
+  if (k !== expected.length) {
+    return false;
+  }
+
+  for (let i = 0; i < k; i++) {
+    if (nums[i] === expected[i]) {
+      continue;
+    }
+
+    return false;
+  }
+
+  return true;
+};
+
 export const test = () => {
-  new TestModule(removeDuplicatesWithSplice).test([new TestTarget("case 01", [[1, 1, 2]], 2)]);
-  new TestModule(removeDuplicatesWithSplice).test([new TestTarget("case 02", [[0, 0, 1, 1, 1, 2, 2, 3, 3, 4]], 5)]);
+  console.log("case 01", judge(removeDuplicates, [1, 1, 2], [1, 2]));
+  console.log("case 02", judge(removeDuplicates, [0, 0, 1, 1, 1, 2, 2, 3, 3, 4], [0, 1, 2, 3, 4]));
 };
