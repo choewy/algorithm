@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0025-reverse-nodes-in-k-group";
+import * as target from "./solved/leetcode-0026-remove-duplicates-from-sorted-array";
 
 const main = () => {
   target.test();
