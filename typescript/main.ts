@@ -1,4 +1,4 @@
-import * as target from "./solved/leetcode-0024-swap-nodes-in-pairs";
+import * as target from "./solved/leetcode-0025-reverse-nodes-in-k-group";
 
 const main = () => {
   target.test();
