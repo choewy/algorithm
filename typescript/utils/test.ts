@@ -3,7 +3,7 @@ export class TestTarget<Args extends Array<any>, Expect> {
 }
 
 export class TestModule<Args extends Array<any>, Expect> {
-  constructor(readonly func: (...args: Args) => Expect) {}
+  constructor(readonly func: (...args: Args) => Expect, readonly logging: boolean = true) {}
 
   private checkArray(expect: Array<any>, output: Array<any>) {
     return JSON.stringify(expect.sort()) === JSON.stringify(output.sort());
@@ -28,9 +28,11 @@ export class TestModule<Args extends Array<any>, Expect> {
         result = expect === output;
       }
 
-      const message = JSON.stringify({ name, args, expect, output, result }, null, 2);
+      if (this.logging) {
+        const message = JSON.stringify({ name, args, expect, output, result }, null, 2);
 
-      console.log(message);
+        console.log(message);
+      }
     }
   }
 }
